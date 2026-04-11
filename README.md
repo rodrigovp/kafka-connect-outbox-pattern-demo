@@ -2,7 +2,7 @@
 
 This project shows how to reliably publish events from a database to Kafka using the Outbox Pattern with Debezium and Kafka Connect.
 
-🇧🇷 Versão em português disponível no arquivo README.pt-BR.md
+🇧🇷 [Read this in Portuguese](README.pt-BR.md)
 
 ---
 
