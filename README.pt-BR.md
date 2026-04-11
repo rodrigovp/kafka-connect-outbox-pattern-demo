@@ -35,6 +35,9 @@ Aplicação -> Banco (outbox) -> Debezium -> Kafka Connect -> Kafka
 
 ```
 docker-compose up -d
+```
+Espere alguns segundos até que os containers estejam no ar.
+```
 mvn -f app/pom.xml mvn spring-boot:start
 ```
 
