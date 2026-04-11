@@ -44,23 +44,19 @@ Wait a few seconds until everything is up.
 ## How to test
 
 1. Insert a record into the outbox table
+```
+curl -X POST http://localhost:8080/orders
+```
+
 2. Consume messages from Kafka
+```
+docker exec -it postgres psql -U postgres -d orders -c "SELECT * FROM outbox;"
+```
+
 3. Check if the event appears
-
----
-
-## Tests
-
-This project includes integration tests that validate the full flow.
-
----
-
-## Common issues
-
-- PostgreSQL not configured for CDC
-- Kafka Connect not ready yet
-- Wrong connector configuration
-
+```
+docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic dbserver1.public.outbox --from-beginning
+```
 ---
 
 ## Learn more

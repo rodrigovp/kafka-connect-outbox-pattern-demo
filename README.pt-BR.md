@@ -33,29 +33,29 @@ Aplicação -> Banco (outbox) -> Debezium -> Kafka Connect -> Kafka
 
 ## Como rodar
 
+```
 docker-compose up -d
+mvn -f app/pom.xml mvn spring-boot:start
+```
 
 ---
 
 ## Como testar
 
 1. Inserir um registro na tabela outbox
-2. Consumir do Kafka
-3. Verificar o evento
+```
+curl -X POST http://localhost:8080/orders
+```
 
----
+2. Verificar o registro no banco
+```
+docker exec -it postgres psql -U postgres -d orders -c "SELECT * FROM outbox;"
+```
 
-## Testes
-
-Este projeto possui testes de integração que validam o fluxo completo.
-
----
-
-## Problemas comuns
-
-- PostgreSQL sem CDC habilitado
-- Kafka Connect ainda não iniciou
-- Configuração incorreta
+3. Verificar o evento no kafka
+```
+docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic dbserver1.public.outbox --from-beginning
+```
 
 ---
 
