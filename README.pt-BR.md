@@ -66,8 +66,8 @@ docker exec -it kafka kafka-console-consumer --bootstrap-server kafka:9092 --top
 
 Se quiser aprender mais sobre Kafka e boas práticas:
 
-- Kafka Connect e Kafka Streams - integre suas aplicações ao Kafka usando as melhores práticas
+- 📘 Kafka Connect e Kafka Streams - integre suas aplicações ao Kafka usando as melhores práticas
   ([Amazon](https://www.amazon.com.br/Kafka-Connect-Streams-aplicações-melhores-ebook/dp/B0D4R7N7SR) | [Casa do Código](https://www.casadocodigo.com.br/products/livro-kafka-connect-e-kafka-streams))
 
-- Kafka e Schema Registry - modelagem de eventos com robustez e segurança
+- 📘 Kafka e Schema Registry - modelagem de eventos com robustez e segurança
   ([Amazon](https://www.amazon.com.br/Kafka-Schema-Registry-Modelagem-segurança-ebook/dp/B0FKDDMFPG) | [Casa do Código](https://www.casadocodigo.com.br/products/livro-kafka-schema-registry))
