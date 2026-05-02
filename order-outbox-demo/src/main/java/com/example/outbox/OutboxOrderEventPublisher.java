@@ -1,8 +1,8 @@
 package com.example.outbox;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import tools.jackson.databind.ObjectMapper;
 
 import java.util.UUID;
 
@@ -12,9 +12,9 @@ public class OutboxOrderEventPublisher implements OrderEventPublisher {
     private final JdbcTemplate jdbcTemplate;
     private final ObjectMapper objectMapper;
 
-    public OutboxOrderEventPublisher(JdbcTemplate jdbcTemplate) {
+    public OutboxOrderEventPublisher(JdbcTemplate jdbcTemplate, ObjectMapper objectMapper) {
         this.jdbcTemplate = jdbcTemplate;
-        this.objectMapper = new ObjectMapper();
+        this.objectMapper = objectMapper;
     }
 
     @Override
