@@ -9,9 +9,9 @@ import static java.util.UUID.randomUUID;
 @Service
 public class OutboxService {
 
-    private OutboxOrderEventPublisher publisher;
+    private OrderEventPublisher publisher;
 
-    public OutboxService(OutboxOrderEventPublisher publisher) {
+    public OutboxService(OrderEventPublisher publisher) {
         this.publisher = publisher;
     }
 
