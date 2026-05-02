@@ -38,7 +38,7 @@ docker-compose up -d
 ```
 Espere alguns segundos até que os containers estejam no ar.
 ```
-mvn -f app/pom.xml mvn spring-boot:start
+mvn -f order-outbox-demo/pom.xml mvn spring-boot:start
 ```
 
 ---
